@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blahhits - Stress Relief Punching Bag</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>BLAHHITS</h1>
+            <p class="subtitle">Stress Relief Punching Bag</p>
+        </div>
+
+        <div class="stats">
+            <div class="stat-item">
+                <span class="stat-label">Hits</span>
+                <span class="stat-value" id="hitCount">0</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-label">Power</span>
+                <span class="stat-value" id="power">0%</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-label">Combo</span>
+                <span class="stat-value" id="combo">0x</span>
+            </div>
+        </div>
+
+        <div class="arena">
+            <svg class="bag-container" viewBox="0 0 200 300" preserveAspectRatio="xMidYMid meet">
+                <!-- Bag chain/rope -->
+                <line x1="100" y1="0" x2="100" y2="40" stroke="#333" stroke-width="3"/>
+                
+                <!-- Bag -->
+                <ellipse id="bag" cx="100" cy="130" rx="50" ry="70" fill="#D32F2F" stroke="#8B0000" stroke-width="2"/>
+                
+                <!-- Bag shine/highlight -->
+                <ellipse cx="85" cy="100" rx="15" ry="25" fill="#FF6B6B" opacity="0.6"/>
+                
+                <!-- Bag stitches -->
+                <line x1="100" y1="70" x2="100" y2="190" stroke="#8B0000" stroke-width="1" opacity="0.5"/>
+            </svg>
+
+            <div class="glove-area">
+                <div class="glove" id="glove">
+                    <div class="glove-inner"></div>
+                    <div class="glove-thumb"></div>
+                </div>
+                <p class="tap-text">TAP THE GLOVE</p>
+            </div>
+        </div>
+
+        <div class="particle-container" id="particleContainer"></div>
+
+        <div class="controls">
+            <button class="btn btn-reset" id="resetBtn">RESET</button>
+            <button class="btn btn-sound" id="soundToggle">🔊 SOUND ON</button>
+        </div>
+
+        <div class="footer">
+            <p>Made with 💪 for stress relief</p>
+        </div>
+    </div>
+
+    <script src="js/audio.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
